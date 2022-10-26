@@ -1,0 +1,278 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Noto+Sans:wght@300;400;500;600&family=Roboto+Mono&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; */
+    outline: none;
+    border: none;
+    /* border: 1px solid #07f; */
+    z-index: 10
+}
+
+
+:root {
+    /* Typography */
+    --golden-ratio: 1.1618;
+
+    --fs-plain-l: clamp(1.6rem, 1.56rem + 0.78vw, 1.725rem);
+    --fs-plain-m: clamp(1.4rem, 1.36rem + 0.58vw, 1.5rem);
+    --fs-plain-s: clamp(1.2rem, 1.26rem + 0.58vw, 1.3rem);
+
+    --fs-head1: clamp(5.35rem, 2.99rem + 2.39vw, 4.6rem);
+    --fs-head2: clamp(2.35rem, 2.99rem + 2.39vw, 3.6rem);
+    --fs-head3: clamp(2.1rem, 1.89rem + 1.67vw, 2.85rem);
+    --fs-head4: clamp(1.85rem, 1.71rem + 1.31vw, 2.35rem);
+    --fs-head5: var(--fs-plain-l);
+
+    --fs-sub-l: var(--fs-plain-l);
+    --fs-sub-s: var(--fs-plain-m);
+
+    --fs-body-l: var(--fs-plain-l);
+    --fs-body-s: var(--fs-plain-m);
+
+    --fs-caption: var(--fs-plain-s);
+    --fs-overline: var(--fs-plain-s);
+    --fs-label: var(--fs-plain-m);
+
+    --fs-button: var(--fs-plain-m);
+
+    /* Colors */
+    --text: #1f1f1f;
+    --code-text: #323130;
+    --grey-borders: #c8c6c4;
+    --grey-bg: #faf9f8;
+    --grey-hover-bg: #44474614;
+    --grey-code-bg: #f2f2f2;
+
+    --info-bg-pos: #effaf5;
+    --info-txt-pos: #257953;
+    --info-bg-note: #eff5fb;
+    --info-txt-note: #296fa8;
+    --info-bg-neg: #feecf0;
+    --info-txt-neg: #cc0f35;
+    --warn-txt: #c19a00;
+    --warn-bg: #ffeea8;
+
+
+    --primary-surface: #ffffff;
+    --primary-bg: #1a73e8;
+    --primary-hover-bg: #358cff;
+    --primary-active: #002aff;
+    --primary-hover-shadow: 0 3px 3px -1px #00000040;
+
+    --primary-disabled-bg: #848484;
+    --primary-disabled-txt: #3d3d3d;
+
+    --secondary-bg: #ffffff;
+    --secondary-surface: var(--primary-bg);
+    --secondary-hover-bg: #e3e8ff;
+    --secondary-active: #abb9ff;
+
+    --secondary-disabled-bg: #d1d1d1;
+    --secondary-disabled-txt: var(--primary-disabled-txt);
+
+    --neg-surface: var(--info-txt-neg);
+    --neg-bg: var(--info-bg-neg);
+    --neg-hover-bg: #ffccd5;
+    --neg-active: #fba4b4;
+
+    --neg-disabled-bg: var(--secondary-disabled-bg);
+    --neg-disabled-txt: var(--primary-disabled-txt);
+} 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-left: .5rem;
+}
+
+:is(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6)+* {
+    margin-top: 2rem;
+}
+
+
+
+h1 {
+    font: normal 400 var(--fs-head1) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head1) * var(--golden-ratio));
+    letter-spacing: -2.5px;
+}
+
+h2 {
+    font: normal 400 var(--fs-head2) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head2) * var(--golden-ratio));
+    letter-spacing: -1.5px;
+}
+
+h3 {
+    font: normal 400 var(--fs-head3) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head3) * var(--golden-ratio));
+}
+
+h4 {
+    font: normal 500 var(--fs-head4) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head4) * var(--golden-ratio));
+}
+
+h5 {
+    font: normal 700 var(--fs-head5) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head5) * var(--golden-ratio));
+}
+
+.body-l {
+    font: normal 400 var(--fs-body-l) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-body-l) * var(--golden-ratio));
+}
+
+.body-s {
+    font: normal 400 var(--fs-body-s) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-body-s) * var(--golden-ratio));
+}
+
+.sub-l {
+    font: normal 400 var(--fs-sub-l) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-sub-l) * var(--golden-ratio));
+    padding: 0 1rem;
+}
+
+.sub-s {
+    font: normal 600 var(--fs-sub-s) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-sub-s) * var(--golden-ratio));
+}
+
+button {
+    font: normal 600 var(--fs-button) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-button) * var(--golden-ratio));
+    text-transform: uppercase;
+    /* Other CSS */
+    cursor: pointer;
+    margin: .2rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--text);
+    border-radius: 2px;
+}
+
+.caption {
+    font: normal 400 var(--fs-caption) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-caption) * var(--golden-ratio));
+}
+
+.overline {
+    font: normal 700 var(--fs-overline) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-overline) * var(--golden-ratio));
+    text-transform: uppercase;
+    padding: 0 1rem;
+}
+
+label {
+    font: normal 500 var(--fs-label) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-label) * var(--golden-ratio));
+}
+
+.devanagari {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+code, .code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--grey-code-bg);
+    color: var(--code-text);
+    padding: 0 1rem;
+    margin: 2rem 0;
+    border-radius: 2px;
+    overflow-x: auto;
+}
+
+pre.code {
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+a {
+    color: inherit;
+    font-weight: 700 !important;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 2rem;
+    padding-left: .5rem;
+    width: 100%;
+    max-width: 70rem;
+}
+
+html {
+    font-size: 63.5%;
+    scroll-behavior: smooth;
+    /* scroll-margin: ; */
+}
+
+body {
+    overflow-x: hidden;
+    /* background: ; */
+    min-height: 100vh;
+}
+
+.icon {
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    position: relative;
+    margin: 0 .5rem;
+}
+
+.icon>* {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.primary-cta {
+    color: #ffffff;
+    background-color: #1a73e8;
+}
+
+.primary-cta:hover {
+    background-color: var(--primary-hover-bg);
+    box-sizing: var(--primary-hover-shadow);
+}
+
+.primary-cta:active {
+    background-color: var(--primary-active);
+}
+
+/* *********** MEDIA QUERIES **************** */
+
+
+@media (max-width: 769px) {
+    html {
+        font-size: 55.5%;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 45.5%;
+    }
+}

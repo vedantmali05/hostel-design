@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="design_system.css">
+</head>
+
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="head-sec">
+            <span class="overline">Hostel and Mess Project</span>
+            <h1>Design System</h1>
+            <span class="sub-l">with Components</span>
+        </div>
+        <div class="content-sec">
+            <p class="body-l">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis possimus quas soluta tempora? Dicta
+                nam quod iste totam deleniti. Nihil quis neque, error corporis tenetur distinctio non illum voluptas
+                tempora obcaecati itaque in, ratione, sequi provident aliquam! Sunt, corrupti exercitationem. Vitae
+                veniam impedit ut! Sit cumque ipsa totam atque, ullam earum accusantium quae minus provident iusto nemo
+                quod illum rerum eos temporibus fuga ratione consectetur beatae possimus nisi. Laboriosam officiis
+                molestias, tenetur rerum repellat animi reprehenderit eius ad.
+            </p>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="index-col">
+            <h2>Page Index</h2>
+            <div id="page_index">
+            </div>
+        </section>
+        <section class="design-col">
+            <section class="design-sec" id="sec_typography" title="Typography">
+                <h3>Typography</h3>
+
+                <div class="design-content-box">
+                    <h4>Implementation</h4>
+
+                    <p class="body-l">
+                        The Fonts used in the system are Sans Serif and Monospace fonts :- <code
+                            class="code">Montserrat, Source Sans Pro, Noto Sans</code> and <code
+                            class="code">Roboto Mono</code>
+                    </p>
+                    <p class="sub-l">The fonts and variants are explained in <a href="#typography-scale">Typrography
+                            Scale</a></p>
+                </div>
+
+                <div class="design-content-box">
+                    <h4>Typography Scale</h4>
+                    <div class="typography-scale-box">
+                        <table id="typography-scale">
+                            <tr>
+                                <th class="body-l">Example</th>
+                                <th class="body-l">Category</th>
+                                <th class="body-l">Size</th>
+                                <th class="body-l">Class</th>
+                                <th class="body-l">Weight</th>
+                                <th class="body-l">Typeface</th>
+                                <th class="body-l">Case</th>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <h1>Heading 1</h1>
+                                </td>
+                                <td class="body-l category">H1</td>
+                                <td class="body-l size">clamp(5.35rem, 2.99rem + 2.39vw, 4.6rem)</td>
+                                <td class="body-l class"> - </td>
+                                <td class="body-l weight">400</td>
+                                <td class="body-l typeface">'Montserrat', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <h2>Heading 2</h2>
+                                </td>
+                                <td class="body-l category">H2</td>
+                                <td class="body-l size">clamp(2.35rem, 2.99rem + 2.39vw, 3.6rem)</td>
+                                <td class="body-l class"> - </td>
+                                <td class="body-l weight">400</td>
+                                <td class="body-l typeface">'Montserrat', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <h3>Heading 3</h3>
+                                </td>
+                                <td class="body-l category">H3</td>
+                                <td class="body-l size">clamp(2.1rem, 1.89rem + 1.67vw, 2.85rem)</td>
+                                <td class="body-l class"> - </td>
+                                <td class="body-l weight">400</td>
+                                <td class="body-l typeface">'Montserrat', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <h4>Heading 4</h4>
+                                </td>
+                                <td class="body-l category">H4</td>
+                                <td class="body-l size">clamp(1.85rem, 1.71rem + 1.31vw, 2.35rem)</td>
+                                <td class="body-l class"> - </td>
+                                <td class="body-l weight">500</td>
+                                <td class="body-l typeface">'Montserrat', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <h5>Heading 5</h5>
+                                </td>
+                                <td class="body-l category">H5</td>
+                                <td class="body-l size">clamp(1.6rem, 1.56rem + 0.78vw, 1.725rem)</td>
+                                <td class="body-l class"> - </td>
+                                <td class="body-l weight">500</td>
+                                <td class="body-l typeface">'Montserrat', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <p class="body-l">The quick brown fox jumps over the lazy dog</p>
+                                </td>
+                                <td class="body-l category">Body Large</td>
+                                <td class="body-l size">clamp(1.6rem, 1.56rem + 0.78vw, 1.725rem)</td>
+                                <td class="body-l class"> body-l </td>
+                                <td class="body-l weight">400</td>
+                                <td class="body-l typeface">'Source Sans Pro', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <p class="body-s">The quick brown fox jumps over the lazy dog</p>
+                                </td>
+                                <td class="body-l category">Body Small</td>
+                                <td class="body-l size">clamp(1.4rem, 1.36rem + 0.58vw, 1.5rem)</td>
+                                <td class="body-l class"> body-s </td>
+                                <td class="body-l weight">400</td>
+                                <td class="body-l typeface">'Source Sans Pro', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <p class="sub-l">The quick brown fox jumps over the lazy dog</p>
+                                </td>
+                                <td class="body-l category">Subtitle Large</td>
+                                <td class="body-l size">clamp(1.4rem, 1.36rem + 0.58vw, 1.5rem)</td>
+                                <td class="body-l class"> sub-l </td>
+                                <td class="body-l weight">400</td>
+                                <td class="body-l typeface">'Source Sans Pro', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <p class="sub-s">The quick brown fox jumps over the lazy dog</p>
+                                </td>
+                                <td class="body-l category">Subtitle Small</td>
+                                <td class="body-l size">clamp(1.4rem, 1.36rem + 0.58vw, 1.5rem)</td>
+                                <td class="body-l class"> sub-s</td>
+                                <td class="body-l weight">600</td>
+                                <td class="body-l typeface">'Source Sans Pro', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <button>BUTTON</button>
+                                </td>
+                                <td class="body-l category">Button</td>
+                                <td class="body-l size">clamp(1.4rem, 1.36rem + 0.58vw, 1.5rem)</td>
+                                <td class="body-l class"> - </td>
+                                <td class="body-l weight">600</td>
+                                <td class="body-l typeface">'Source Sans Pro', sans-serif</td>
+                                <td class="body-l case">Uppercase</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <span class="caption">A quick brown fox jumps over a lazy dog</span>
+                                </td>
+                                <td class="body-l category">Caption</td>
+                                <td class="body-l size">clamp(1.2rem, 1.26rem + 0.58vw, 1.3rem)</td>
+                                <td class="body-l class">caption</td>
+                                <td class="body-l weight">400</td>
+                                <td class="body-l typeface">'Source Sans Pro', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <span class="overline">A quick brown fox jumps over a lazy dog</span>
+                                </td>
+                                <td class="body-l category">Overline</td>
+                                <td class="body-l size">clamp(1.2rem, 1.26rem + 0.58vw, 1.3rem)</td>
+                                <td class="body-l class">overline</td>
+                                <td class="body-l weight">700</td>
+                                <td class="body-l typeface">'Montserrat', sans-serif</td>
+                                <td class="body-l case">Uppercase</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <label>A quick brown fox jumps over a lazy dog</label>
+                                </td>
+                                <td class="body-l category">Label</td>
+                                <td class="body-l size">clamp(1.4rem, 1.36rem + 0.58vw, 1.5rem)</td>
+                                <td class="body-l class"> - </td>
+                                <td class="body-l weight">500</td>
+                                <td class="body-l typeface">'Montserrat', sans-serif</td>
+                                <td class="body-l case">Sentence</td>
+                            </tr>
+                            <tr class="typography-elem">
+                                <td class="body-l example">
+                                    <p class="body-l devanagari">चूंकि मानव परिवार के सभी सदस्यों के जन्मजात गौरव और
+                                        समान</p>
+                                </td>
+                                <td class="body-l category">Devanagari Text</td>
+                                <td class="body-l size"> depends on parent </td>
+                                <td class="body-l class"> devanagari + depends on parent </td>
+                                <td class="body-l weight">500</td>
+                                <td class="body-l typeface">'Noto Sans', sans-serif</td>
+                                <td class="body-l case"> depends on parent</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="design-content-box">
+                    <h3>Standard CSS</h3>
+
+                    <pre class="code body-s">:root {
+ /* Typography */
+ --golden-ratio: 1.1618;
+ --fs-plain-l: clamp(1.6rem, 1.56rem + 0.78vw, 1.725rem);
+ --fs-plain-m: clamp(1.4rem, 1.36rem + 0.58vw, 1.5rem);
+ --fs-plain-s: clamp(1.2rem, 1.26rem + 0.58vw, 1.3rem);
+ --fs-head1: clamp(5.35rem, 2.99rem + 2.39vw, 4.6rem);
+ --fs-head2: clamp(2.35rem, 2.99rem + 2.39vw, 3.6rem);
+ --fs-head3: clamp(2.1rem, 1.89rem + 1.67vw, 2.85rem);
+ --fs-head4: clamp(1.85rem, 1.71rem + 1.31vw, 2.35rem);
+ --fs-head5: var(--fs-plain-l);
+ --fs-sub-l: var(--fs-plain-l);
+ --fs-sub-s: var(--fs-plain-m);
+ --fs-body-l: var(--fs-plain-l);
+ --fs-body-s: var(--fs-plain-m);
+ --fs-caption: var(--fs-plain-s);
+ --fs-overline: var(--fs-plain-s);
+ --fs-label: var(--fs-plain-m);
+ --fs-button: var(--fs-plain-m); 
+}</pre>
+
+                    <pre class="code body-s">
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-left: .5rem;
+}
+
+:is(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6)+* {
+    margin-top: 2rem;
+}
+
+
+
+h1 {
+    font: normal 400 var(--fs-head1) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head1) * var(--golden-ratio));
+    letter-spacing: -2.5px;
+}
+
+h2 {
+    font: normal 400 var(--fs-head2) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head2) * var(--golden-ratio));
+    letter-spacing: -1.5px;
+}
+
+h3 {
+    font: normal 400 var(--fs-head3) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head3) * var(--golden-ratio));
+}
+
+h4 {
+    font: normal 500 var(--fs-head4) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head4) * var(--golden-ratio));
+}
+
+h5 {
+    font: normal 700 var(--fs-head5) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-head5) * var(--golden-ratio));
+}
+
+.body-l {
+    font: normal 400 var(--fs-body-l) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-body-l) * var(--golden-ratio));
+}
+
+.body-s {
+    font: normal 400 var(--fs-body-s) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-body-s) * var(--golden-ratio));
+}
+
+.sub-l {
+    font: normal 400 var(--fs-sub-l) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-sub-l) * var(--golden-ratio));
+    padding: 0 1rem;
+}
+
+.sub-s {
+    font: normal 600 var(--fs-sub-s) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-sub-s) * var(--golden-ratio));
+}
+
+button {
+    font: normal 600 var(--fs-button) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-button) * var(--golden-ratio));
+    text-transform: uppercase;
+    /* Other CSS */
+    cursor: pointer;
+    margin: .2rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--text);
+    border-radius: 2px;
+}
+
+.caption {
+    font: normal 400 var(--fs-caption) 'Source Sans Pro', sans-serif;
+    line-height: calc(var(--fs-caption) * var(--golden-ratio));
+}
+
+.overline {
+    font: normal 700 var(--fs-overline) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-overline) * var(--golden-ratio));
+    text-transform: uppercase;
+    padding: 0 1rem;
+}
+
+label {
+    font: normal 500 var(--fs-label) 'Montserrat', sans-serif;
+    line-height: calc(var(--fs-label) * var(--golden-ratio));
+}
+
+.devanagari {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+code, .code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--grey-code-bg);
+    color: var(--code-text);
+    padding: 0 1rem;
+    margin: 2rem 0;
+    border-radius: 2px;
+    
+}
+
+pre.code {
+    padding: 1rem;
+}</pre>
+                </div>
+            </section>
+
+            <!-- Color Design Section -->
+            <section class="design-sec" id="sec_color" title="Color Pallete">
+                <h2>Color Pallete</h2>
+
+                <h3>Primary Colors</h3>
+                <p class="body-l">Used in most important Call to Action buttons, toggle or tool button, links or any
+                    text, etc. </p>
+                <div class="color-pallete-box">
+                    <div class="color-box">
+                        <span class="color-name">Primary</span>
+                        <code class="color-token">--primary-bg</code>
+                        <code class="color-code">#1a73e8</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Primary Surface</span>
+                        <code class="color-token">--primary-surface</code>
+                        <code class="color-code">#ffffff</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Primary Hover</span>
+                        <code class="color-token">--primary-hover-bg</code>
+                        <code class="color-code">#358cff</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Primary Active</span>
+                        <code class="color-token">--primary-active</code>
+                        <code class="color-code">#002aff</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Primary Hover Shadow</span>
+                        <code class="color-token">--primary-hover-shadow</code>
+                        <code class="color-code">#00000040</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Primary Disabled Background</span>
+                        <code class="color-token">--primary-disabled-bg</code>
+                        <code class="color-code">#848484</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Primary Disabled Text</span>
+                        <code class="color-token">--primary-disabled-txt</code>
+                        <code class="color-code">#3d3d3d</code>
+                    </div>
+
+                </div>
+
+                <!-- Secondary Colors -->
+                <h3>Secondary Colors</h3>
+                <p class="body-l">Used in less important Call to Action buttons, toggle or tool button, links or any
+                    text, etc. </p>
+                <div class="color-pallete-box">
+                    <div class="color-box">
+                        <span class="color-name">Secondary (Background)</span>
+                        <code class="color-token">--secondary-bg</code>
+                        <code class="color-code">#ffffff</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Secondary Surface</span>
+                        <code class="color-token">--secondary-surface</code>
+                        <code class="color-code">#1a73e8</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Secondary Hover</span>
+                        <code class="color-token">--secondary-hover-bg</code>
+                        <code class="color-code">#e3e8ff</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Secondary Active</span>
+                        <code class="color-token">--secondary-active</code>
+                        <code class="color-code">#abb9ff</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Secondary Disabled Background</span>
+                        <code class="color-token">--secondary-disabled-bg</code>
+                        <code class="color-code">#d1d1d1</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Secondary Disabled Text</span>
+                        <code class="color-token">--secondary-disabled-txt</code>
+                        <code class="color-code">#3d3d3d</code>
+                    </div>
+
+                </div>
+
+                <!-- Negative Colors -->
+                <h3>Negative Colors</h3>
+                <p class="body-l">Negative colors show errors or an action of the user that can lead to his/her data
+                    loss.</p>
+                <div class="color-pallete-box">
+                    <div class="color-box">
+                        <span class="color-name">Negative Surface</span>
+                        <code class="color-token">--neg-surface</code>
+                        <code class="color-code">#cc0f35</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Negative (Background)</span>
+                        <code class="color-token">--neg-bg</code>
+                        <code class="color-code">#feecf0</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Negative Hover</span>
+                        <code class="color-token">--neg-hover-bg</code>
+                        <code class="color-code">#ffccd5</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Negative Active</span>
+                        <code class="color-token">--neg-active</code>
+                        <code class="color-code">#fba4b4</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Negative Disabled Background</span>
+                        <code class="color-token">--neg-disabled-bg</code>
+                        <code class="color-code">#d1d1d1</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Negative Disabled Text</span>
+                        <code class="color-token">--neg-disabled-txt</code>
+                        <code class="color-code">#3d3d3d</code>
+                    </div>
+
+                </div>
+
+                <!-- Neutral Colors -->
+                <h3>Neutral Colors</h3>
+                <p class="body-l">Used in text, box shadow, borders, backgrounds, etc.</p>
+                <div class="color-pallete-box">
+                    <div class="color-box">
+                        <span class="color-name">Text</span>
+                        <code class="color-token">--text</code>
+                        <code class="color-code">#1f1f1f</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Code Text</span>
+                        <code class="color-token">--code-text</code>
+                        <code class="color-code">#323130</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Grey Borders</span>
+                        <code class="color-token">--grey-borders</code>
+                        <code class="color-code">#c8c6c4</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Grey Background</span>
+                        <code class="color-token">--grey-bg</code>
+                        <code class="color-code">#faf9f8</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Grey Hover Background</span>
+                        <code class="color-token">--grey-hover-bg</code>
+                        <code class="color-code">#44474614</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Grey Code Background</span>
+                        <code class="color-token">--grey-code-bg</code>
+                        <code class="color-code">#f2f2f2</code>
+                    </div>
+                </div>
+
+                <!-- Information Cards Color -->
+                <h3>Information Cards Colors</h3>
+                <p class="body-l">Information cards can be normal boxes, or snackbars, notifications, popups, etc.</p>
+                <div class="color-pallete-box">
+                    <div class="color-box">
+                        <span class="color-name">Information Background Positive</span>
+                        <code class="color-token">--info-bg-pos</code>
+                        <code class="color-code">#effaf5</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Information Text Positive</span>
+                        <code class="color-token">--info-txt-pos</code>
+                        <code class="color-code">#257953</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Information Background Note</span>
+                        <code class="color-token">--info-bg-note</code>
+                        <code class="color-code">#eff5fb</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Information Text Note</span>
+                        <code class="color-token">--info-txt-note</code>
+                        <code class="color-code">#296fa8</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Information Background Negative</span>
+                        <code class="color-token">--info-bg-neg</code>
+                        <code class="color-code">#feecf0</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Information Text Negative</span>
+                        <code class="color-token">--info-txt-neg</code>
+                        <code class="color-code">#cc0f35</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Warning Background </span>
+                        <code class="color-token">--warn-bg</code>
+                        <code class="color-code">#ffeea8</code>
+                    </div>
+                    <div class="color-box">
+                        <span class="color-name">Warning Text</span>
+                        <code class="color-token">--warn-txt</code>
+                        <code class="color-code">#c19a00</code>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="design_system.js"></script>
+    <script src="components.js"></script>
+</body>
+
+</html>
