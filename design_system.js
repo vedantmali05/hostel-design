@@ -49,7 +49,7 @@ for (let i = 0; i < componentSecArr.length; i++) {
     indexLink.classList.add("page-index-item");
     indexLink.classList.add("body-l");
     indexLink.setAttribute("href", "#" + componentSecArr[i].getAttribute("id"));
-    indexLink.innerHTML = `${componentSecArr[i].getAttribute("title")}` + `<span class="icon arrow-right"></span>`;
+    indexLink.innerHTML = `${componentSecArr[i].getAttribute("title")}` + `<i class="bi bi-arrow-right"></i>`;
     pageIndexCtr.appendChild(indexLink);
 }
 
@@ -58,7 +58,6 @@ let colorBoxArr = document.getElementsByClassName("color-box");
 for (let i = 0; i < colorBoxArr.length; i++) {
     let colorCode = colorBoxArr[i].getElementsByClassName("color-code")[0].innerHTML;
 
-    console.log(colorCode);
     colorBoxArr[i].style.backgroundColor = colorCode;
 
     let isLight = lightOrDark(colorCode);

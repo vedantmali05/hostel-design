@@ -1,5 +1,8 @@
-/* Importing Fonts */
+/* //////////////////////////////// Importing Fonts //////////////////////////////// */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Noto+Sans:wght@300;400;500;600&family=Roboto+Mono&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+/* //////////////////////////////// Bootstrap Icons //////////////////////////////// */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -8,15 +11,19 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    /* -webkit-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -ms-transition: all .2s linear;
     -o-transition: all .2s linear;
-    transition: all .2s linear; */
+    transition: all .2s linear;
     outline: none;
     border: none;
     /* border: 1px solid #07f; */
     z-index: 10
+}
+
+*:disabled {
+    pointer-events: none;
 }
 
 
@@ -51,7 +58,7 @@
     --code-text: #323130;
     --grey-borders: #c8c6c4;
     --grey-bg: #faf9f8;
-    --grey-hover-bg: #44474614;
+    --grey-hover-bg: #e6e6e6;
     --grey-code-bg: #f2f2f2;
 
     --info-bg-pos: #effaf5;
@@ -88,7 +95,19 @@
 
     --neg-disabled-bg: var(--secondary-disabled-bg);
     --neg-disabled-txt: var(--primary-disabled-txt);
-} 
+}
+
+html {
+    font-size: 63.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* //////////////////////////////// Typography //////////////////////////////// */
 
 h1,
 h2,
@@ -162,12 +181,6 @@ button {
     font: normal 600 var(--fs-button) 'Source Sans Pro', sans-serif;
     line-height: calc(var(--fs-button) * var(--golden-ratio));
     text-transform: uppercase;
-    /* Other CSS */
-    cursor: pointer;
-    margin: .2rem;
-    padding: 1rem 2rem;
-    border: 1px solid var(--text);
-    border-radius: 2px;
 }
 
 .caption {
@@ -191,19 +204,15 @@ label {
     font-family: 'Noto Sans', sans-serif;
 }
 
-code, .code {
-    font-family: 'Roboto Mono', monospace;
-    background-color: var(--grey-code-bg);
-    color: var(--code-text);
-    padding: 0 1rem;
-    margin: 2rem 0;
-    border-radius: 2px;
-    overflow-x: auto;
-}
 
-pre.code {
-    overflow-x: auto;
-    padding: 1rem;
+
+/* //////////////////////////////// Other Elements and CSS //////////////////////////////// */
+
+p {
+    margin-top: 2rem;
+    padding-left: .5rem;
+    width: 100%;
+    max-width: 70rem;
 }
 
 a {
@@ -215,54 +224,257 @@ a:hover {
     text-decoration: underline;
 }
 
-p {
-    margin-top: 2rem;
-    padding-left: .5rem;
-    width: 100%;
-    max-width: 70rem;
+a:focus,
+a:active {
+    background-color: var(--grey-hover-bg);
 }
 
-html {
-    font-size: 63.5%;
-    scroll-behavior: smooth;
-    /* scroll-margin: ; */
+/* Codes */
+
+code,
+.code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--grey-code-bg);
+    color: var(--code-text);
+    padding: 0 1rem;
+    margin: 2rem 0;
+    border-radius: 2px;
+    overflow-x: auto;
+    line-height: 160%;
 }
 
-body {
-    overflow-x: hidden;
-    /* background: ; */
-    min-height: 100vh;
+pre.code {
+    overflow-x: auto;
+    padding: 1rem;
 }
 
-.icon {
-    min-width: 1.5rem;
-    min-height: 1.5rem;
-    position: relative;
-    margin: 0 .5rem;
+/* Icons */
+
+.bi {
+    font-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.icon>* {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+/* Push Buttons */
+
+.btn {
+    cursor: pointer;
+    margin: .2rem;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    border: 1px solid var(--grey-borders);
+    background-color: var(--primary-surface);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
+.btn:hover {
+    border-color: var(--text);
+}
+
+.btn:active {
+    background-color: var(--secondary-disabled-bg);
+    border-color: var(--text);
+}
+
+.btn:disabled {
+    color: var(--primary-disabled-bg);
+}
 
 .primary-cta {
-    color: #ffffff;
-    background-color: #1a73e8;
+    font-weight: 400;
+    border: none;
+    color: var(--primary-surface);
+    background-color: var(--primary-bg);
 }
 
 .primary-cta:hover {
     background-color: var(--primary-hover-bg);
-    box-sizing: var(--primary-hover-shadow);
 }
 
 .primary-cta:active {
     background-color: var(--primary-active);
 }
 
-/* *********** MEDIA QUERIES **************** */
+.primary-cta:disabled {
+    color: var(--primary-disabled-txt);
+    background-color: var(--primary-disabled-bg);
+}
+
+.secondary-cta {
+    border: 1px solid var(--secondary-hover-bg);
+    color: var(--secondary-surface);
+    background-color: var(--secondary-bg);
+}
+
+.secondary-cta:hover {
+    border-color: var(--secondary-hover-bg);
+    background-color: var(--secondary-hover-bg);
+}
+
+.secondary-cta:active {
+    border-color: var(--secondary-active);
+    background-color: var(--secondary-active);
+}
+
+.secondary-cta:disabled {
+    border-color: var(--secondary-disabled-bg);
+    color: var(--secondary-disabled-txt);
+    background-color: var(--secondary-disabled-bg);
+}
+
+.icon-btn {
+    padding: 0;
+    background-color: var(--primary-surface);
+    border: none;
+}
+
+.icon-btn:hover {
+    background-color: var(--grey-hover-bg);
+}
+
+.icon-btn:active {
+    background-color: var(--grey-borders);
+}
+
+.icon-btn:disabled,
+.icon-btn:disabled * {
+    color: var(--primary-disabled-bg);
+}
+
+.icon-text-btn .bi {
+    margin: -0.4rem;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Menu Button / Command Bar Button */
+
+.menu-btn-box {
+    position: relative;
+}
+
+.menu-btn-btn .down-arrow {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+.menu-btn-btn .down-arrow::before,
+.menu-btn-btn .down-arrow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: .25rem;
+    background-color: var(--text);
+    z-index: 11;
+}
+
+.menu-btn-btn .down-arrow::before {
+    left: 0;
+    rotate: 35deg;
+    translate: 17% 405%;
+}
+
+.menu-btn-btn .down-arrow::after {
+    right: 0;
+    rotate: -35deg;
+    translate: -17% 400%;
+}
+
+.menu-btn-btn.btn .down-arrow::after,
+.menu-btn-btn.btn .down-arrow::before {
+    background-color: var(--text);
+}
+
+.menu-btn-btn.btn:disabled .down-arrow::after,
+.menu-btn-btn.btn:disabled .down-arrow::before {
+    background-color: var(--primary-disabled-bg);
+}
+
+.menu-btn-btn.primary-cta .down-arrow::after,
+.menu-btn-btn.primary-cta .down-arrow::before {
+    background-color: var(--primary-surface);
+}
+
+.menu-btn-btn.primary-cta:disabled .down-arrow::after,
+.menu-btn-btn.primary-cta:disabled .down-arrow::before {
+    background-color: var(--primary-disabled-txt);
+}
+
+.menu-btn-btn.secondary-cta .down-arrow::after,
+.menu-btn-btn.secondary-cta .down-arrow::before {
+    background-color: var(--secondary-surface);
+}
+
+.menu-btn-btn.secondary-cta:disabled .down-arrow::after,
+.menu-btn-btn.secondary-cta:disabled .down-arrow::before {
+    background-color: var(--secondary-disabled-txt);
+}
+
+.menu-btn-btn.menu-open .down-arrow {
+    rotate: 180deg;
+}
+
+.menu-btn-menu {
+    box-shadow: var(--primary-hover-shadow);
+    border: 1px solid var(--grey-borders);
+    border-radius: 5px;
+    
+    width: 100%;
+    max-width: 35rem;
+
+    position: absolute;
+    top: 105%;
+    left: 0;
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-btn-menu.menu-open {
+    max-height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-btn-menu .menu-item {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: var(--primary-surface);
+}
+
+.menu-btn-menu .menu-item:not(:first-child) {
+    border-top: 1px solid var(--grey-borders);
+}
+
+.menu-btn-menu .menu-item:hover {
+    background-color: var(--grey-hover-bg);
+}
+
+.menu-btn-menu :is(.menu-item:active) {
+    background-color: var(--secondary-disabled-bg);
+}
+
+.menu-btn-menu .menu-item i:first-child {
+    margin-right: 1rem;
+}
+
+
+/* //////////////////////////////// MEDIA QUERIES //////////////////////////////// */
 
 
 @media (max-width: 769px) {
